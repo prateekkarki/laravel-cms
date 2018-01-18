@@ -1,3 +1,5 @@
 ### Laravel CMS
 
-## CMS build using Laravel and Vue.js
+## CMS built using Laravel and Vue.js
+
+# Work In Progress
