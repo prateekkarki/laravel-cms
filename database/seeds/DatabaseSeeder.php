@@ -20,15 +20,12 @@ class DatabaseSeeder extends Seeder
         Role::firstOrCreate(['name' => Role::ROLE_EDITOR]);
         $role_admin = Role::firstOrCreate(['name' => Role::ROLE_ADMIN]);
 
-        // MediaLibrary
-        MediaLibrary::firstOrCreate([]);
-
         // Users
         $user = User::firstOrCreate(
-            ['email' => 'darthvader@deathstar.ds'],
+            ['email' => 'admin@org.com'],
             [
-                'name' => 'anakin',
-                'password' => Hash::make('4nak1n'),
+                'name' => 'Admin User',
+                'password' => Hash::make('admin'),
                 'email_verified_at' => now()
             ]
         );

@@ -16,9 +16,9 @@ $factory->define(User::class, function (Generator $faker) {
     ];
 });
 
-$factory->state(User::class, 'anakin', function (Generator $faker) {
+$factory->state(User::class, 'admin', function (Generator $faker) {
     return [
-        'name' => 'Anakin',
-        'email' => 'anakin@skywalker.st'
+        'name' => 'Admin User',
+        'email' => 'admin@laravel.com'
     ];
 });
