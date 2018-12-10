@@ -1,10 +1,8 @@
-### Laravel CMS
+# Building CMS with Laravel and Vue.js
 
-## CMS built using Laravel and Vue.js
-
-# Work In Progress
-
-<hr>
+### WIP
+    This is a work in progress. Can be used for development, we will be ready for production soon.
+    
 ### Getting Started
 
 ```
