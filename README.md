@@ -9,12 +9,15 @@
 $ git clone https://github.com/prateekkarki/laravel-cms.git
 $ cd laravel-cms
 $ cp .env.example .env
+
 $ composer install
+
 $ php artisan key:generate
+
 $ npm install
 $ npm run dev
 
-
 $ php artisan migrate --seed
+$ php artisan serve
 
 ```
