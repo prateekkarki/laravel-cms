@@ -7,3 +7,8 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+ul.ml-auto li:first-child {
+    padding-right: 2em;
+}

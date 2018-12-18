@@ -32,16 +32,6 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('thumbnail_id', __('posts.attributes.thumbnail')) !!}
-    {!! Form::select('thumbnail_id', $media, null, ['placeholder' => __('posts.placeholder.thumbnail'), 'class' => 'form-control' . ($errors->has('thumbnail_id') ? ' is-invalid' : '')]) !!}
-
-    @if ($errors->has('thumbnail_id'))
-        <span class="invalid-feedback">{{ $errors->first('thumbnail_id') }}</span>
-    @endif
-</div>
-
-
-<div class="form-group">
     {!! Form::label('content', __('posts.attributes.content')) !!}
     {!! Form::textarea('content', null, ['class' => 'form-control trumbowyg-form' . ($errors->has('content') ? ' is-invalid' : ''), 'required' => 'required']) !!}
 

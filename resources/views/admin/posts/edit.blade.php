@@ -1,7 +1,23 @@
 @extends('admin.layouts.app')
 
 @section('content')
-    <p>@lang('posts.show') : {{ link_to_route('posts.show', route('posts.show', $post), $post) }}</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <p>
+                    @lang('posts.show') : 
+                    <a href="{{ route('posts.show', $post) }}" target="_blank">
+                        {{ route('posts.show', $post) }}  <i class="fas fa-igloo"></i>
+                    </a>
+                </p>    
+            </div>
+            <div class="col-md-3">
+                {!! Form::model($post, ['method' => 'DELETE', 'route' => ['admin.posts.destroy', $post], 'class' => 'form-inline float-right', 'data-confirm' => __('forms.posts.delete')]) !!}
+                    {!! Form::button('<i class="fa fa-trash" aria-hidden="true"></i> ' . __('posts.delete'), ['class' => 'btn btn-link text-danger', 'name' => 'submit', 'type' => 'submit']) !!}
+                {!! Form::close() !!}                
+            </div>
+        </div>
+    </div>
 
     @include('admin/posts/_thumbnail')
 
@@ -14,7 +30,5 @@
         </div>
     {!! Form::close() !!}
 
-    {!! Form::model($post, ['method' => 'DELETE', 'route' => ['admin.posts.destroy', $post], 'class' => 'form-inline pull-right', 'data-confirm' => __('forms.posts.delete')]) !!}
-        {!! Form::button('<i class="fa fa-trash" aria-hidden="true"></i> ' . __('posts.delete'), ['class' => 'btn btn-link text-danger', 'name' => 'submit', 'type' => 'submit']) !!}
-    {!! Form::close() !!}
+
 @endsection

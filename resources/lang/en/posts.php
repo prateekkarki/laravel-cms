@@ -3,7 +3,7 @@
 return [
   'publish' => 'Publish',
   'posts' => 'Posts',
-  'delete' => 'Delete',
+  'delete' => 'Delete Post',
   'delete_thumbnail' => "Delete the picture",
   'edit' => 'Edit',
   'last_posts' => 'Latest posts',

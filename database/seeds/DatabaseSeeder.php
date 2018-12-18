@@ -36,12 +36,11 @@ class DatabaseSeeder extends Seeder
         $post = Post::firstOrCreate(
             [
                 'title' => 'Hello World',
-                'author_id' => $user->id
-            ],
-            [
+                'author_id' => $user->id,
+                'slug' => 'hello-world',
                 'posted_at' => now(),
                 'content' => "
-                    Welcome to Laravel-blog !<br><br>
+                    Welcome to Laravel-cms !<br><br>
                     Don't forget to read the README before starting.<br><br>
                     Feel free to add a star on Github!<br><br>
                     You can open an issue or (better) a PR if something went wrong."
