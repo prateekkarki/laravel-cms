@@ -20,7 +20,7 @@
                 <td><span class="badge badge-pill badge-secondary">{{ $post->likes_count }}</span></td>
                 <td>
                     <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-primary btn-sm">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                     </a>
 
                     {!! Form::model($post, ['method' => 'DELETE', 'route' => ['admin.posts.destroy', $post], 'class' => 'form-inline', 'data-confirm' => __('forms.posts.delete')]) !!}

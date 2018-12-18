@@ -11,6 +11,14 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
+/**
+ * PostController
+ *
+ * Handles posts on admin area
+ * ToDo : Handle mediaLibrary
+ * 
+ */
+
 class PostController extends Controller
 {
     /**
@@ -31,7 +39,7 @@ class PostController extends Controller
         return view('admin.posts.edit', [
             'post' => $post,
             'users' => User::authors()->pluck('name', 'id'),
-            'media' => MediaLibrary::first()->media()->get()->pluck('name', 'id')
+            'media' => null
         ]);
     }
 
@@ -42,7 +50,7 @@ class PostController extends Controller
     {
         return view('admin.posts.create', [
             'users' => User::authors()->pluck('name', 'id'),
-            'media' => MediaLibrary::first()->media()->get()->pluck('name', 'id')
+            'media' => null
         ]);
     }
 
